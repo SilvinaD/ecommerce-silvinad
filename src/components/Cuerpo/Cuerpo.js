@@ -1,5 +1,3 @@
-//import logo from './logo.svg'
-
 function Cuerpo(){
     return (
 
@@ -7,6 +5,5 @@ function Cuerpo(){
 
      )
 }
-
 
 export default Cuerpo;
