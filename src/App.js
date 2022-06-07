@@ -11,7 +11,7 @@ function App() {
       <NavBar/>
       {/* <Cuerpo/> */}
       <ItemListContainer greeting='Bienvenidos !!!!!'/>
-      <ItemCount stock={10} initial = {1} />
+      <ItemCount stock={10} initial={1} />
    </>
   );
 }
