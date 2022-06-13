@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { getFetch } from '../../helpers/getFetch';
-import ItemList from '../ItemList/ItemList';
+import ItemList from '../../components/ItemList/ItemList';
 //import './ItemListContainer.css';
 
 const ItemListContainer = () => {
@@ -8,20 +9,31 @@ const ItemListContainer = () => {
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
 
+    const {categoryId} =useParams()
+
     useEffect(() => {
-        getFetch() //llamada a la api
-            .then((resp) => {
-                setItems(resp)
-            })
-            .catch(err => console.log(err))
-            .finally(() => setLoading(false))
-    }, [])
+        if (categoryId) {
+            getFetch()
+                .then((resp) => {
+                     setItems(resp.filter(item => item.category === categoryId))
+                     setLoading(false) 
+                })
+                .catch(err => console.log(err))
+        } else {
+            getFetch()
+                .then((resp) => {
+                    setItems(resp)
+                    setLoading(false) 
+                })
+        }
+    }, [categoryId])
 
    // console.log(items)
 
     return (
-        <div>
 
+        <div id='contenedor'>
+            
             {loading ?
                 <h2>Loading...</h2>
                 :

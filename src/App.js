@@ -1,17 +1,26 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 //import Cuerpo from './components/Cuerpo/Cuerpo';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 function App() {
   //Todo lo que se ve en pantalla - JS parecido a html - Dif claseName y cierre /
   return (
-   <>
-      <NavBar/>
-      {/* <Cuerpo/> */}
-      <ItemListContainer greeting='Bienvenidos !!!!!'/>
-     {/* <ItemCount stock={10} initial={1} />*/}
+    <>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+           <Route index path='/' element={<ItemListContainer/>} /> 
+           <Route index path='/category/:categoryId' element={<ItemListContainer/>} /> 
+
+           <Route path='/item/:id' element={<ItemDetailContainer/>} />
+            
+           <Route path='*' element={<Navigate to='/'/>} />
+        </Routes>
+      </BrowserRouter>
    </>
   );
 }
