@@ -1,6 +1,6 @@
 import ItemCount from "../ItemCount/ItemCount"
 
-const ItemDetail = ({ item }) => {
+/*const ItemDetail = ({ item }) => {
     return (
         <div className="row">
             <div className="col-md-6">
@@ -16,14 +16,14 @@ const ItemDetail = ({ item }) => {
     )
 }
 
-export default ItemDetail
+export default ItemDetail*/
 
-/*
+
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
-function Items({item}) {
+function ItemDetail({item}) {
   return (
-    <MDBCard style={{ maxWidth: '540px' }}>
+    <MDBCard style={{ maxWidth: '540px', margin: 'auto' }}>
       <MDBRow className='g-0'>
         <MDBCol md='4'>
           <MDBCardImage src='https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.webp' alt='...' fluid />
@@ -36,6 +36,7 @@ function Items({item}) {
             </MDBCardText>
             <MDBCardText>
               <small className='text-muted'> {item.price}</small>
+              <ItemCount stock={item.stock} initial={1}/>
             </MDBCardText>
           </MDBCardBody>
         </MDBCol>
@@ -43,4 +44,4 @@ function Items({item}) {
     </MDBCard>
   );
 }
-*/
+export default ItemDetail
