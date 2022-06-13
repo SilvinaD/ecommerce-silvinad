@@ -12,6 +12,7 @@ function App() {
     <>
       <BrowserRouter>
         <NavBar/>
+        <h2> Aca agregar home </h2>
         <Routes>
            <Route index path='/' element={<ItemListContainer/>} /> 
            <Route index path='/category/:categoryId' element={<ItemListContainer/>} /> 
