@@ -12,6 +12,22 @@ const ItemListContainer = () => {
     const {categoryId} =useParams()
 
     useEffect(() => {
+        
+        getFetch()
+            .then((resp) => {
+                 setItems(!categoryId ? resp:resp.filter(item => item.category === categoryId))
+                 setLoading(false) 
+            })
+            .catch(err => console.log(err))
+            return () =>{
+                setLoading(true); }
+                
+        }, [categoryId])
+
+
+
+
+    /* useEffect(() => {
         if (categoryId) {
             getFetch()
                 .then((resp) => {
@@ -19,14 +35,19 @@ const ItemListContainer = () => {
                      setLoading(false) 
                 })
                 .catch(err => console.log(err))
+                return () =>{
+                    setLoading(true); }
         } else {
             getFetch()
                 .then((resp) => {
                     setItems(resp)
                     setLoading(false) 
                 })
+                return () =>{
+                    setLoading(true); }
         }
-    }, [categoryId])
+
+    }, [categoryId]) */
 
    // console.log(items)
 
