@@ -19,7 +19,7 @@ const ItemCount  = ({stock, initial, onAdd}) => {
     
     }*/
 
-    const addProduct = () => {
+    const addCounter = () => {
         onAdd(counter)
         setSelect(false)
       }
@@ -32,7 +32,7 @@ const ItemCount  = ({stock, initial, onAdd}) => {
                 <p>{counter}</p>
                 <button onClick={Decrement} > - </button>
             </div>
-            <button onClick={addProduct} >Add to Cart</button>
+            <button onClick={addCounter} >Add to Cart</button>
         </div>
     )
 }

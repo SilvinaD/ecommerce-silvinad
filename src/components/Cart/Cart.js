@@ -11,7 +11,7 @@ const Cart = () => {
       {CartList.length < 1 ? (
         <p>Empty Cart</p>
       ) : (
-        CartList.map((i) => <CartItem key={i.item.id} Item ={i.item}/>)
+        CartList.map((i) => <CartItem key={i.item.id} item ={i.item} counter= {i.counter }/>)
       )}
     </div>
     

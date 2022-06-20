@@ -4,7 +4,7 @@ let products = [
         title: 'Skate 1',
         category: 'Skate',
         description: 'bla bla bla fjdhfkjahdfkjhdjkfhhdskjfhdkf',
-        price: '$15000',
+        price: 15000,
         image: '',
         stock: 5
         
@@ -14,7 +14,7 @@ let products = [
         title: 'Skate 2',
         category: 'Skate',
         description: 'la la lal ala lal a fdsfdfadhfkjhdkjfhkjadhskfh',
-        price: '$20000',
+        price: 20000,
         image: '',
         stock: 10
         
@@ -24,7 +24,7 @@ let products = [
         title: 'Skate 3',
         category: 'Skate',
         description: 'pa pa pa papappapa hakjsdhfjkshdfkjhaksjdfh',
-        price: '$25000',
+        price: 25000,
         image: '',
         stock: 12
        
@@ -34,7 +34,7 @@ let products = [
         title: 'Skate 4',
         category: 'Longboard',
         description: 'pa pa pa papappapa hadfajshdfkjhadskjhfkhasdkhf',
-        price: '$25000',
+        price: 25000,
         image: '',
         stock: 7
        
