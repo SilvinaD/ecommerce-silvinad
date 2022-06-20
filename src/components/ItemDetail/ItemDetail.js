@@ -1,27 +1,19 @@
-import ItemCount from "../ItemCount/ItemCount"
-
-/*const ItemDetail = ({ item }) => {
-    return (
-        <div className="row">
-            <div className="col-md-6">
-                <img src={item.image} className="img-fluidw-100" alt="..." />
-            </div>
-            <div className="col-md-6">
-                <h2>{item.title}</h2>
-                <h3>{item.description}</h3>
-                <h4>{item.price}</h4> 
-                <ItemCount stock={10} initial={1}/>
-            </div>
-        </div>
-    )
-}
-
-export default ItemDetail*/
-
-
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
-function ItemDetail({item}) {
+import { useContext } from 'react'
+//import { Link } from 'react-router-dom'
+import ItemCount from '../ItemCount/ItemCount'
+import { CartContext } from '../../context/CartContext';
+
+const ItemDetail = ({item}) => {
+
+  const { stock } = item
+  const {AddToCart} = useContext(CartContext)
+
+  const onAdd = (counter) => {
+    AddToCart (item, counter) 
+    };
+
   return (
     <MDBCard style={{ maxWidth: '540px', margin: 'auto' }}>
       <MDBRow className='g-0'>
@@ -35,13 +27,21 @@ function ItemDetail({item}) {
             {item.description}
             </MDBCardText>
             <MDBCardText>
-              <small className='text-muted'> {item.price}</small>
-              <ItemCount stock={item.stock} initial={1}/>
-            </MDBCardText>
+            <small className='text-muted'> {item.price}</small>
+
+                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+                    <h2> {stock} Available </h2>
+
+             </MDBCardText>
           </MDBCardBody>
         </MDBCol>
       </MDBRow>
     </MDBCard>
-  );
+  )
 }
 export default ItemDetail
+
+/*      
+                    <Link to= '/Cart'>
+                      <button className="btn btn-primary">Go to cart</button>
+                    </Link> */

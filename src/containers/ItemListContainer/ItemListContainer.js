@@ -4,6 +4,7 @@ import { getFetch } from '../../helpers/getFetch';
 import ItemList from '../../components/ItemList/ItemList';
 //import './ItemListContainer.css';
 
+
 const ItemListContainer = () => {
 
     const [items, setItems] = useState([])
@@ -23,33 +24,6 @@ const ItemListContainer = () => {
                 setLoading(true); }
                 
         }, [categoryId])
-
-
-
-
-    /* useEffect(() => {
-        if (categoryId) {
-            getFetch()
-                .then((resp) => {
-                     setItems(resp.filter(item => item.category === categoryId))
-                     setLoading(false) 
-                })
-                .catch(err => console.log(err))
-                return () =>{
-                    setLoading(true); }
-        } else {
-            getFetch()
-                .then((resp) => {
-                    setItems(resp)
-                    setLoading(false) 
-                })
-                return () =>{
-                    setLoading(true); }
-        }
-
-    }, [categoryId]) */
-
-   // console.log(items)
 
     return (
 

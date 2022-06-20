@@ -19,7 +19,7 @@ function Items ({item}) {
           <MDBCardFooter>
             <small className='text-muted'>Precio: {item.price}</small>
                <Link to={`/item/${item.id}`}>
-                     <button className="btn btn-primary"> Ver Detalle </button>
+                     <button className="btn btn-primary"> Details </button>
                </Link>
           </MDBCardFooter>
         </MDBCard>
