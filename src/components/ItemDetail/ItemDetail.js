@@ -1,14 +1,13 @@
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
-import { useContext } from 'react'
 //import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
-import { CartContext } from '../../context/CartContext';
+import { UseCartContext } from '../../context/CartContext';
 
 const ItemDetail = ({item}) => {
 
   const { stock } = item
-  const {AddToCart} = useContext(CartContext)
+  const {AddToCart} = UseCartContext()
 
   const onAdd = (counter) => {
     AddToCart (item, counter) 
