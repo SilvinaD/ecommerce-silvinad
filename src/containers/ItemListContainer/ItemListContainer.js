@@ -13,43 +13,25 @@ const ItemListContainer = () => {
 
     const {categoryId} =useParams()
 
-   // ** reemplazo **
-   /* useEffect(() => {
-        getFetch()
-            .then((resp) => {
-                 setItems(!categoryId ? resp:resp.filter(item => item.category === categoryId))
-                 setLoading(false) 
-            })
-            .catch(err => console.log(err))
-            return () =>{
-                setLoading(true); }
-        }, [categoryId])
 
-    /** useEffect para traer todos los items **/
         useEffect(() => {
             const db = getFirestore() // ** conectar a la base de datos
-            const queryCollection = collection (db, 'items') // ** traer de la coleccion items
-            getDocs(queryCollection)
-            .then (data => setItems(data.docs.map( (item) => ( {id:item.id, ...item.data()})))) 
-            .catch(err => console.log(err))
-            .finally(() => setLoading(false))
-        }, []) 
-       
-        //console.log(items)
+            const queryCollection = collection (db, 'Products') // ** traer de la coleccion Products
 
-    /** useEffect para traer Filtrados **/
-        useEffect(() => {
-            const db = getFirestore() // ** conectar a la base de datos
-            const queryCollection = collection (db, 'items') // ** traer de la coleccion items
-            const queryCollectionFilter = query (queryCollection, where ('category', '==', 'Skates' /*categoryId*/), limit(10), orderBy('price', 'asc')) // aquellos que coincidan 
+            getDocs(
+                categoryId
+                ? query(queryCollection, where ('category', '==', categoryId), limit(10), orderBy('price', 'asc')) // ** aquellos que coincidan )
+                : queryCollection
 
-            getDocs(queryCollectionFilter)
-            .then (data => setItems(data.docs.map( (item) => ( {id:item.id, ...item.data()})))) 
-            .catch(err => console.log(err))
-            .finally(() => setLoading(false))
+            )
+                .then ((resp) =>
+                    setItems (resp.docs.map((item) => ({ id: item.id, ...item.data() })))
+                )
+                .catch((err) => console.log(err))
+                .finally(setLoading(false))
+            
         }, [categoryId]) 
-        
-        console.log(items)
+
         
     return (
 
@@ -66,21 +48,3 @@ const ItemListContainer = () => {
 export default ItemListContainer;
 
 
-//function ItemListContainer() {
-//    return(
-
-//        <h1>Aca va el catalogo</h1>
-
-//    )
-//}
-
-//const ItemListContainer = ({greeting}) => {
-   
-//    return (
-        
-//            <h2>{greeting}</h2>
-      
-//    );
-//}
-
-//export default ItemListContainer;

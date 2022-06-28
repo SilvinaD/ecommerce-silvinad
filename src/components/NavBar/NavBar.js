@@ -18,8 +18,8 @@ function NavBar() {
             <Nav className="me-auto">
               <NavLink to="/">Home</NavLink>
               <NavLink className= 'link'
-                    to="/category/Skate">Skates</NavLink>
-              <NavLink to="/category/Longboard">Longboards</NavLink>
+                    to="/category/Skates">Skates</NavLink>
+              <NavLink to="/category/Longboards">Longboards</NavLink>
             </Nav>
             <Link to= '/cart'> 
              <CartWidget/>
