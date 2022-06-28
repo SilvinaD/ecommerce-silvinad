@@ -9,8 +9,8 @@ import { doc, getDoc, getFirestore } from 'firebase/firestore'
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState([])
-  //const [loading, setLoading] = useState(true)
-  const [bool, setBool] = useState(false)
+  const [loading, setLoading] = useState(true)
+  //const [bool, setBool] = useState(false)
 
   const {id} = useParams()
 
@@ -21,18 +21,18 @@ const ItemDetailContainer = () => {
         getDoc(queryItem) //promesa
         .then(resp => setItem ( { id: resp.id, ...resp.data()} ))
         .catch(err => console.log(err))
+        .finally(setLoading(false))
         
-  }, [bool]) 
+  }, []) 
 
   return (
       
       <div id='contenedor'>
-
-          {loading ?
-              <h2>Loading...</h2>
-              :
-              <ItemDetail item={item} />
-              }
+            {loading ?
+                <h2>Loading...</h2>
+                :
+                <ItemDetail item={item}/>
+                 }
       </div>  
   )
 }

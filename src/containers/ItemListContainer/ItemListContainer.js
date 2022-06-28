@@ -20,7 +20,7 @@ const ItemListContainer = () => {
 
             getDocs(
                 categoryId
-                ? query(queryCollection, where ('category', '==', categoryId), limit(10), orderBy('price', 'asc')) // ** aquellos que coincidan )
+                ? query(queryCollection, where ('category', '==', categoryId)) // ** aquellos que coincidan )
                 : queryCollection
 
             )
@@ -40,7 +40,7 @@ const ItemListContainer = () => {
             {loading ?
                 <h2>Loading...</h2>
                 :
-                ItemList(items)}
+                <ItemList items={items} /> }
         </div>
     );
 }

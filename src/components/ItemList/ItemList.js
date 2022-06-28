@@ -3,7 +3,7 @@ import Item from '../Item/Item';
 
 // ** ItemList es el array mapeado ** //
 
-function ItemList(items){
+function ItemList({items}){
 
     return(
     
