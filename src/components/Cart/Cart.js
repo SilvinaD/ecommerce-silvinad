@@ -12,11 +12,12 @@ import CartItem from "./CartItem";
     const createOrder = () => {
 
         const db = getFirestore() // ** conectar a la base de datos
-        const queryCollection = collection(db, "orders");
+        const queryCollection = collection(db, "orders")
+        const price = PriceTotal()
 
         const user = { nombre: "Silvina Donvito", email: "silvina1@gmail.com", phone: "54112584691" }
 
-        const order = { user, CartList, PriceTotal, created_at: serverTimestamp() }
+        const order = { user, CartList, price, created_at: serverTimestamp() }
 
         const request = addDoc(queryCollection, order)
 
