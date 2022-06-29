@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 //import { getFetch } from '../../helpers/getFetch';
 import ItemList from '../../components/ItemList/ItemList';
-import { collection, getDocs, getFirestore, limit, orderBy, query, where } from 'firebase/firestore'
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 //import './ItemListContainer.css';
 
 
