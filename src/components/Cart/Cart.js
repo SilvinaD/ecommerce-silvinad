@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { UseCartContext } from "../../context/CartContext";
 import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore";
 import CartItem from "./CartItem";
@@ -7,7 +6,6 @@ import CartItem from "./CartItem";
   const Cart = () => {
 
     const { CartList, EmptyCart, PriceTotal, IconCart } = UseCartContext();
-    const [order, setOrder] = useState(false)
   
     const createOrder = () => {
 
@@ -23,7 +21,6 @@ import CartItem from "./CartItem";
 
         request
             .then((resp) => {
-                setOrder(resp.id)
                 alert("Your purchase was succesful!" + resp.id);
 
             })

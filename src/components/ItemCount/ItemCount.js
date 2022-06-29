@@ -2,7 +2,7 @@ import { useState } from "react";
 const ItemCount  = ({stock, initial, onAdd}) => {
 
     const [counter, setCounter] = useState(initial)
-    const [select, setSelect] = useState(true)
+    //const [select, setSelect] = useState(true)
 
     const Increment = () => {
         if(counter < stock)
@@ -21,7 +21,7 @@ const ItemCount  = ({stock, initial, onAdd}) => {
 
     const addCounter = () => {
         onAdd(counter)
-        setSelect(false)
+       // setSelect(false)
       }
       
     return(
