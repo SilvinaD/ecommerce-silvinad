@@ -1,10 +1,8 @@
-import {MdShoppingCart} from "react-icons/md"
+import { MdShoppingCart } from "react-icons/md"
 
 function CartWidget(){
     return(
-
         <MdShoppingCart/>
-        
      )
 }
 

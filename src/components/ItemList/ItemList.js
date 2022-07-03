@@ -1,7 +1,4 @@
 import Item from '../Item/Item';
-//import './ItemList.css'
-
-// ** ItemList es el array mapeado ** //
 
 function ItemList({items}){
 

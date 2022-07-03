@@ -1,5 +1,6 @@
-import { UseCartContext } from "../../context/CartContext";
 import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore";
+
+import { UseCartContext } from "../../context/CartContext";
 import CartItem from "./CartItem";
 
 
@@ -9,7 +10,7 @@ import CartItem from "./CartItem";
   
     const createOrder = () => {
 
-        const db = getFirestore() // ** conectar a la base de datos
+        const db = getFirestore() 
         const queryCollection = collection(db, "orders")
         const total = PriceTotal()
 
@@ -36,18 +37,18 @@ import CartItem from "./CartItem";
   return (
     <>
     <div>
-      {CartList.length < 1 ? ( 
+      { CartList.length < 1 ? ( 
         <p>Empty Cart</p>
       ) : (
         CartList.map((i) => <CartItem key={i.item.id} item ={i.item} counter= {i.counter }/>)
-      )}
+      ) }
     </div>
     
-    <button onClick={EmptyCart}>Clean Cart</button>
-    <p>Total amount {PriceTotal()} </p>
-    {IconCart() < 1? <p> </p>:<p> Item {IconCart()}</p>}
+    <button onClick={ EmptyCart }>Clean Cart</button>
+    <p>Total amount { PriceTotal() } </p>
+    { IconCart() < 1 ? <p> </p> : <p> Item { IconCart() } </p> }
+    <button onClick={ createOrder }>Confirm order</button>
 
-    <button onClick={createOrder}>Confirm order</button>
     </>
   );
 };

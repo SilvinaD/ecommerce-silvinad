@@ -1,6 +1,5 @@
-//import './Item.css'
-import { Link } from "react-router-dom";
-import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import {Link} from "react-router-dom";
+import {MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol} from 'mdb-react-ui-kit';
 
 function Items ({item}) {
   return (

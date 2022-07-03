@@ -1,13 +1,13 @@
-import './NavBar.css';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import {NavLink, Link} from 'react-router-dom';
+import {Navbar, Container, Nav} from 'react-bootstrap';
 
-import { NavLink, Link } from 'react-router-dom';
-import { UseCartContext } from '../../context/CartContext';
+import {UseCartContext} from '../../context/CartContext';
 import CartWidget from '../CartWidget/CartWidget';
+import './NavBar.css';
 
 
 function NavBar() {
-  const { IconCart, CartList } = UseCartContext()
+  const {IconCart, CartList} = UseCartContext()
 
   return (
     <Navbar bg="light" expand="lg">
@@ -24,7 +24,9 @@ function NavBar() {
             <Link to= '/cart'> 
              <CartWidget/>
             </Link>
+
             {CartList.lenght < 1 ? '' : <p> Item amount {IconCart()} </p>}
+          
           </Navbar.Collapse>
       </Container>
   </Navbar>

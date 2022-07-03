@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-//import { getFetch } from '../../helpers/getFetch';
-import ItemList from '../../components/ItemList/ItemList';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
-//import './ItemListContainer.css';
+
+import ItemList from '../../components/ItemList/ItemList';
 
 
 const ItemListContainer = () => {
@@ -13,14 +12,14 @@ const ItemListContainer = () => {
 
     const {categoryId} =useParams()
 
-
         useEffect(() => {
-            const db = getFirestore() // ** conectar a la base de datos
-            const queryCollection = collection (db, 'Products') // ** traer de la coleccion Products
+
+            const db = getFirestore() 
+            const queryCollection = collection (db, 'Products') 
 
             getDocs(
                 categoryId
-                ? query(queryCollection, where ('category', '==', categoryId)) // ** aquellos que coincidan )
+                ? query(queryCollection, where ('category', '==', categoryId)) 
                 : queryCollection
 
             )

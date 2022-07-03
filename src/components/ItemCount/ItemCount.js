@@ -1,8 +1,8 @@
-import { useState } from "react";
-const ItemCount  = ({stock, initial, onAdd}) => {
+import {useState} from "react";
+
+    const ItemCount= ({stock, initial, onAdd}) => {
 
     const [counter, setCounter] = useState(initial)
-    //const [select, setSelect] = useState(true)
 
     const Increment = () => {
         if(counter < stock)
@@ -14,19 +14,13 @@ const ItemCount  = ({stock, initial, onAdd}) => {
             setCounter(counter - 1)
         }
     
-   /* const onAdd = () => {
-        console.log(`Agregaste ${counter} productos a tu carrito`)
-    
-    }*/
-
     const addCounter = () => {
         onAdd(counter)
-       // setSelect(false)
       }
       
     return(
         <div>
-            <p>Seleccionar cantidad de items</p>
+            <p>Select quantity</p>
             <div>
                 <button onClick={Increment} > + </button>
                 <p>{counter}</p>
