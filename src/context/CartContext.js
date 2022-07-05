@@ -8,15 +8,21 @@ const CartContextProvider = ({ children }) => {
     const [CartList, setCartList] = useState([])
 
     const AddToCart = (item, counter) => {
-         
-        if (IsInCart(item.id)) {
-          alert("Is in your cart yet")
+      let product = { item, counter };
+  
+      let auxCart = [];
+  
+      if (IsInCart(item.id)) {
+        product = CartList.find(e => e.item.id === item.id);
+        product.counter += counter;
+        auxCart = [...CartList];
+      } else {
+        auxCart = [product, ...CartList];
+      }
 
-        } else {
-          setCartList([...CartList, { item, counter }])
-          alert("Was added")
-        }
-    }
+      setCartList(auxCart);
+    };
+
 
     const DelItem = (id) => {
       const items = CartList.filter((product)=> product.item.id !== id)
