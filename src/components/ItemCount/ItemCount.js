@@ -15,6 +15,7 @@ import {useState} from "react";
         }
     
     const addCounter = () => {
+        console.log(`Confirm quantity: ${counter}`)
         onAdd(counter)
       }
       
@@ -26,7 +27,7 @@ import {useState} from "react";
                 <p>{counter}</p>
                 <button onClick={Decrement} > - </button>
             </div>
-            <button onClick={addCounter} >Add to Cart</button>
+            <button onClick={addCounter} >Add to Cart!</button>
         </div>
     )
 }
