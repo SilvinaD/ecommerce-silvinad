@@ -1,9 +1,10 @@
-import {NavLink, Link} from 'react-router-dom';
-import {Navbar, Container, Nav} from 'react-bootstrap';
+import {NavLink, Link} from 'react-router-dom'
+import {Navbar, Container, Nav} from 'react-bootstrap'
 
-import {UseCartContext} from '../../context/CartContext';
-import CartWidget from '../CartWidget/CartWidget';
-import './NavBar.css';
+import {UseCartContext} from '../../context/CartContext'
+import CartWidget from '../CartWidget/CartWidget'
+import './NavBar.css'
+import logo  from './logoSkate.png'
 
 
 function NavBar() {
@@ -11,8 +12,13 @@ function NavBar() {
 
   return (
     <Navbar bg="light" expand="lg">
-    <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <div>
+            <Link to="/">
+             {" "}
+             <img className="logo" src={logo} alt="logo1" />
+            </Link>
+        </div>
+      <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -25,11 +31,11 @@ function NavBar() {
              <CartWidget/>
             </Link>
 
-            {CartList.lenght < 1 ? '' : <p> Item amount {IconCart()} </p>}
+            {CartList.lenght < 1 ? '' : <p> {IconCart()} </p>}
           
           </Navbar.Collapse>
       </Container>
-  </Navbar>
+    </Navbar>
   )
 }
 
