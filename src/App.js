@@ -1,12 +1,13 @@
-import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom';
-import {createContext} from "react";
+import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
+import {createContext} from "react"
 
-import CartContextProvider from './context/CartContext';
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
-import Cart from './components/Cart/Cart';
-import NotFound from './components/NotFound/NotFound';
+import CartContextProvider from './context/CartContext'
+import NavBar from './components/NavBar/NavBar'
+import ItemListContainer from './containers/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer'
+import Cart from './components/Cart/Cart'
+import NotFound from './components/NotFound/NotFound'
+import Footer from './components/Footer/Footer'
 
 
 export const AppContext = createContext();
@@ -30,6 +31,7 @@ function App() {
            <Route path={"*"} element={<Navigate to="/404" replace />} />
         </Routes>
         
+        <Footer/>
       </BrowserRouter>
       </CartContextProvider>
    </>
