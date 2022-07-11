@@ -13,6 +13,10 @@ import {useState} from "react";
         if(counter > initial) 
             setCounter(counter - 1)
         }
+
+    const Reset = () => {
+            setCounter(1)
+        }
     
     const addCounter = () => {
         console.log(`Confirm quantity: ${counter}`)
@@ -23,11 +27,12 @@ import {useState} from "react";
         <div>
             <p>Select quantity</p>
             <div>
+                <p> Amount: {counter}</p>
                 <button onClick={Increment} > + </button>
-                <p>{counter}</p>
+                <button onClick={Reset} > Reset </button>
                 <button onClick={Decrement} > - </button>
             </div>
-            <button onClick={addCounter} >Add to Cart!</button>
+            <button onClick={addCounter} >Add to Cart</button>
         </div>
     )
 }
