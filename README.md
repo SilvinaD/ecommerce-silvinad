@@ -15,7 +15,11 @@ Plataforma digital orientada a la venta de tablas. Su rol principal es la venta 
 Demanda: Aquellas personas interesadas en la compra de este tipo de productos.
 
 **Flujo de compra:**
-El usuario podra ....
+El usuario podra navegar los diferentes links. Podra acceder al *Catalogo* general o por categoria en particular a *Skateboards*, *Longboards* y proximamente a *Componentes*
+
+Podra comprar diferentes productos. Una vez agredados al carrito de compras podra agregar/eliminar items individuales o vaciar el carrito completo.
+
+Una vez finalizada la compra, el usuario visualiza la confirmacion con su correspondiente numero de orden. 
 
 ---
 ## SCREEN SHOT 
@@ -24,11 +28,14 @@ El usuario podra ....
 ![Home modelo](public/assets/images/Home.png)
 
 ---
+
 ## DEPENDENCIAS AGREGADAS
 
-* SweetAlert2: Librería de JavaScript para mostrar alertas y diálogos de confirmación [SweetAlert2](https://sweetalert2.github.io).  `npm i sweetalert2`
+* React router dom: Para realizar navegacion entre componentes [React-router-dom](https://reactrouter.com/web/guides/quick-start).  `npm i react-router-dom`
 
-* 
+* SweetAlert2: Para mostrar alertas y diálogos de confirmación [SweetAlert2](https://sweetalert2.github.io).  `npm i sweetalert2`
+
+
 
 ---
 ---
