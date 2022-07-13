@@ -7,6 +7,7 @@ import Swal from "sweetalert2"
 import { UseCartContext } from "../../context/CartContext"
 import CartItem from "./CartItem"
 import './Cart.css'
+import { MDBRow, MDBTable, MDBTableBody, MDBTableHead } from "mdb-react-ui-kit"
 
 
 const Cart = () => {
@@ -76,17 +77,35 @@ const Cart = () => {
 
   } else {
     return (
-      <div>
+      <div style={{margin: 'auto'}}>
         <h1>Cart</h1>
-
+        <MDBRow className='row-cols-1 row-cols-md-4 g-4'>
         {CartList.map((i) => (
           <CartItem key={i.item.id} item={i.item} counter={i.counter} />
         ))}
-        <p>Total item {IconCart()} </p>
-        <p>Total amount USD {PriceTotal()} </p>
+       
+        </MDBRow> 
 
-        <div>
-          <Button variant='outline-danger' size='sm' onClick={EmptyCart}>Clean Cart</Button>
+       <div>
+
+          <MDBTable>
+      <MDBTableHead>
+        <tr className='table-warning'>
+          <th scope='col'>Total amount USD </th>
+          <th scope='col'>Total item</th>
+          <th scope='col'></th>
+        </tr>
+      </MDBTableHead>
+      <MDBTableBody>
+        <tr>
+          <th scope='row'> {PriceTotal()} </th>
+          <td>{IconCart()}</td>
+          <td><Button variant='outline-danger' size='sm' onClick={EmptyCart}>Clean Cart</Button></td>
+          
+        </tr>
+      </MDBTableBody>
+    </MDBTable>
+
           <div className="form">
             <h4>Please, complete this form</h4>
             <Form onSubmit={createOrder}>

@@ -14,7 +14,7 @@ const ItemDetail = ({item}) => {
     }
 
   return (
-    <MDBCard  className="shadow p-3 bg-white" style={{ maxWidth: '650px', margin: '20px', textAlign: 'center'}}>
+    <MDBCard  className="shadow p-3 bg-white" style={{ maxWidth: '650px', margin: 'auto', textAlign: 'center', marginTop: '50px'}}>
       <MDBRow className='g-0'>
         <MDBCol md='4'>
           <MDBCardImage src= {item.image} alt='...' fluid />
