@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { ThreeDots } from  'react-loader-spinner'
+
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
 import ItemList from '../../components/ItemList/ItemList';
@@ -23,11 +25,12 @@ const ItemListContainer = () => {
                 : queryCollection
 
             )
-                .then ((resp) =>
+                .then ((resp) => { 
                     setItems (resp.docs.map((item) => ({ id: item.id, ...item.data() })))
+                    setLoading (false) }
                 )
                 .catch((err) => console.log(err))
-                .finally(setLoading(false))
+                .finally(setLoading(true))
             
         }, [categoryId]) 
 
@@ -37,7 +40,13 @@ const ItemListContainer = () => {
         <div id='contenedor'>
             
             {loading ?
-                <h2>Loading...</h2>
+                <ThreeDots
+                height="100"
+                width="100"
+                color='orange'
+                ariaLabel='loading'
+              />
+            
                 :
                 <ItemList items={items} /> }
         </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { doc, getDoc, getFirestore } from 'firebase/firestore'
+import { ThreeDots } from  'react-loader-spinner'
 
 import ItemDetail from "../../components/ItemDetail/ItemDetail"
 
@@ -18,9 +19,10 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail"
         const queryItem = doc(db, 'Products', id)
         
         getDoc(queryItem) 
-        .then(resp => setItem ( {id: resp.id, ...resp.data()} ))
+        .then(resp => { setItem ( {id: resp.id, ...resp.data()} ) 
+                      setLoading (false)}) 
         .catch(err => console.log(err))
-        .finally(setLoading(false))
+        .finally(setLoading(true))
         
   }, [id]) 
 
@@ -28,7 +30,12 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail"
       
       <div id='contenedor'>
             {loading ?
-                <h2>Loading...</h2>
+                 <ThreeDots
+                 height="100"
+                 width="100"
+                 color='orange'
+                 ariaLabel='loading'
+               />
                 :
                 <ItemDetail item={item}/>
                  }
