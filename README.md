@@ -2,7 +2,7 @@
 
 >Proyecto Final curso ReactJs *CODER HOUSE*. 
 >
->Se desarrolló respetando ciertos lineamientos y cumpliendo con determinados desafios. Uso de Context.
+>Se desarrolló respetando ciertos lineamientos y cumpliendo con determinados desafios. Uso de Context y Firebase.
 >
 ## Tematica del sitio:
 
@@ -32,13 +32,9 @@ En *Firebase* se guardará la información -Orden de Compra-. Almacena los detal
 
 * React router dom: Para realizar navegacion entre componentes [React-router-dom](https://reactrouter.com/web/guides/quick-start).  `npm i react-router-dom`
 
-* React Bootstrap: [React-Bootstrap](https://react-bootstrap.github.io/).  `npm i bootstrap`
-
 * Mdb React Boostrap: [Mdb-React-Bootstrap](https://mdbootstrap.com/docs/b5/react/getting-started/installation/).  `npm i mdbreact `
 
 * React Icons: [React-icons](https://react-icons.github.io/react-icons/).  `npm install react-icons --save`
-
-* React Button: [React-button](https://react-bootstrap.github.io/components/buttons/).  `npm i react-button`
 
 * React Loader Spinner: [React-loader-spinner](https://mhnpd.github.io/react-loader-spinner/).  `npm i react-loader-spinner `
 
