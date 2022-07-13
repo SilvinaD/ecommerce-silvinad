@@ -22,10 +22,9 @@ function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <NavLink to="/">Home</NavLink>
-              <NavLink className= 'link'
-                    to="/category/Skates">Skates</NavLink>
-              <NavLink to="/category/Longboards">Longboards</NavLink>
+              <NavLink to="/">Catalogue</NavLink>
+              <NavLink className= 'link' to="/category/Skates">Skateboards</NavLink>
+              <NavLink className= 'link' to="/category/Longboards">Longboards</NavLink>
             </Nav>
             <Link to= '/cart'> 
              <CartWidget/>

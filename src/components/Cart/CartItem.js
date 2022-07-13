@@ -7,7 +7,7 @@ const CartItem = ({item, counter}) => {
   return (
     <div>
         <h3>{title}</h3>
-        <p>Price: ${price * counter}</p>
+        <p>Price: U$D {price * counter}</p>
         <p>Units: {counter}</p>
         <button onClick={() => DelItem (id)}>Delete Item</button>
     </div>

@@ -27,7 +27,7 @@ import {useState} from "react";
         <div>
             <p>Select quantity</p>
             <div>
-                <p> Amount: {counter}</p>
+                <p> Units: {counter}</p>
                 <button onClick={Increment} > + </button>
                 <button onClick={Reset} > Reset </button>
                 <button onClick={Decrement} > - </button>

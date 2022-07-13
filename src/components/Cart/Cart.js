@@ -55,11 +55,11 @@ import CartItem from "./CartItem"
 
       return (
           <div>
-              <h1>The Cart</h1>
+              <h1>Cart</h1>
               
               {CartList.map((i) => <CartItem key={i.item.id} item ={i.item} counter= {i.counter}/>)} 
               <p>Total item {IconCart()} </p>
-              <p>Total amount {PriceTotal()} </p>
+              <p>Total amount USD {PriceTotal()} </p>
                    
               <div>
               <button onClick={EmptyCart}>Clean Cart</button>
