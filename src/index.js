@@ -1,16 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {getFirestoreApp} from './firebase/config';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './index.css'
+
+import { getFirestoreApp } from './firebase/config'
+
 
 getFirestoreApp()
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);
+)
 
