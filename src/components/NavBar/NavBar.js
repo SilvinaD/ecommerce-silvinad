@@ -1,7 +1,7 @@
-import {NavLink, Link} from 'react-router-dom'
-import {Navbar, Container, Nav} from 'react-bootstrap'
+import { NavLink, Link } from 'react-router-dom'
+import { Navbar, Container, Nav } from 'react-bootstrap'
 
-import {UseCartContext} from '../../context/CartContext'
+import { UseCartContext } from '../../context/CartContext'
 import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
 
@@ -9,7 +9,7 @@ function NavBar() {
   const {IconCart, CartList} = UseCartContext()
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className='color-nav' variant='light' expand="lg">
         <div>
             <Link to="/">
              {" "}
@@ -20,11 +20,11 @@ function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <NavLink to="/">Catalogue</NavLink>
+              <NavLink className= 'link' to="/">Catalogue</NavLink>
               <NavLink className= 'link' to="/category/Skates">Skateboards</NavLink>
               <NavLink className= 'link' to="/category/Longboards">Longboards</NavLink>
             </Nav>
-            <Link to= '/cart'> 
+            <Link style= {{fontSize: '40px', color: 'grey'}} to= '/cart'> 
              <CartWidget/>
             </Link>
 
