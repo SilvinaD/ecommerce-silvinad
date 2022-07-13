@@ -124,7 +124,7 @@ const Cart = () => {
                 />
               </Form.Group>
 
-              <Button variant="success" type="submit">
+              <Button variant="success" size='sm' type="submit">
                 Confirm order
               </Button>
             </Form>
