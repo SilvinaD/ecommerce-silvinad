@@ -4,8 +4,6 @@ import {Navbar, Container, Nav} from 'react-bootstrap'
 import {UseCartContext} from '../../context/CartContext'
 import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
-import logo  from './logoSkate.png'
-
 
 function NavBar() {
   const {IconCart, CartList} = UseCartContext()
@@ -15,7 +13,7 @@ function NavBar() {
         <div>
             <Link to="/">
              {" "}
-             <img className="logo" src={logo} alt="logo1" />
+             <img className="logo" src= '/assets/images/logoSkate.png ' alt="logo1" />
             </Link>
         </div>
       <Container>

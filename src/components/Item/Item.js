@@ -7,7 +7,7 @@ function Items ({item}) {
       <MDBCol>
         <MDBCard className='h-100'>
           <MDBCardImage 
-            src='../assets/images/SkateProd.jpg'
+            src= {item.image}
             alt='...'
             position='top'
           />

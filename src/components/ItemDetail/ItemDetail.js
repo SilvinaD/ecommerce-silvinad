@@ -17,7 +17,7 @@ const ItemDetail = ({item}) => {
     <MDBCard style={{ maxWidth: '540px', margin: 'auto' }}>
       <MDBRow className='g-0'>
         <MDBCol md='4'>
-          <MDBCardImage src='https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.webp' alt='...' fluid />
+          <MDBCardImage src= {item.image} alt='...' fluid />
         </MDBCol>
         <MDBCol md='8'>
           <MDBCardBody>
