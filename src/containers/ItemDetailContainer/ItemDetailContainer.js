@@ -35,7 +35,7 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail"
                  width="100"
                  color='orange'
                  ariaLabel='loading'
-               />
+                 />
                 :
                 <ItemDetail item={item}/>
                  }

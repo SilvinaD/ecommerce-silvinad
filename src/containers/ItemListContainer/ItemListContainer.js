@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { ThreeDots } from  'react-loader-spinner'
 
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
