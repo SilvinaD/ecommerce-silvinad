@@ -1,9 +1,10 @@
 # SKATE SHOP
 
->Proyecto Final curso ReactJs *CODER HOUSE*. 
+>*CODER HOUSE* - Proyecto Integrador - ReactJs. 
 >
->Se desarrolló respetando ciertos lineamientos y cumpliendo con determinados desafios. Uso de Context y Firebase.
+>El proyecto se desarrolló respetando ciertos lineamientos y cumpliendo con determinados desafios. 
 >
+>Uso de Context y Firebase.
 ## Tematica del sitio:
 
 Plataforma digital orientada a la venta de tablas. Su rol principal es la venta de skateboards, longboards y sus componentes. 
