@@ -6,6 +6,8 @@ import Swal from "sweetalert2"
 
 import { UseCartContext } from "../../context/CartContext"
 import CartItem from "./CartItem"
+import './Cart.css'
+
 
 const Cart = () => {
   const { CartList, EmptyCart, PriceTotal, IconCart } = UseCartContext()
@@ -60,7 +62,7 @@ const Cart = () => {
 
   if (CartList.length < 1) {
     return (
-      <div>
+      <div style={{textAlign: 'center', paddingTop: '20px'}}>
         <h4>There are no products in the cart</h4>
 
         <Link to={"/"}>
@@ -84,8 +86,8 @@ const Cart = () => {
         <p>Total amount USD {PriceTotal()} </p>
 
         <div>
-          <Button variant="secondary" size='sm' onClick={EmptyCart}>Clean Cart</Button>
-          <div className="container py-5">
+          <Button variant='outline-danger' size='sm' onClick={EmptyCart}>Clean Cart</Button>
+          <div className="form">
             <h4>Please, complete this form</h4>
             <Form onSubmit={createOrder}>
               <Form.Group className="mb-3">

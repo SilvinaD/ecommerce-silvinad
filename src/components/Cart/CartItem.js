@@ -10,7 +10,7 @@ const CartItem = ({item, counter}) => {
         <h3>{title}</h3>
         <p>Price: USD {price * counter}</p>
         <p>Units: {counter}</p>
-        <Button variant="secondary" size='sm' onClick={() => DelItem (id)}>Delete Item</Button>
+        <Button variant='outline-danger' size='sm' onClick={() => DelItem (id)}>Delete Item</Button>
     </div>
   )
 }
