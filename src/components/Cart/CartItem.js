@@ -15,4 +15,4 @@ const CartItem = ({item, counter}) => {
   )
 }
 
-export default CartItem;
+export default CartItem

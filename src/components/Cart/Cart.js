@@ -133,4 +133,4 @@ const Cart = () => {
   }
 }
 
-export default Cart;
+export default Cart

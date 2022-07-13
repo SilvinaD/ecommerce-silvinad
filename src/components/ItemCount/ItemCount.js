@@ -1,4 +1,6 @@
-import {useState} from "react";
+import { useState } from "react"
+import { Button } from "react-bootstrap"
+
 
     const ItemCount= ({stock, initial, onAdd}) => {
 
@@ -24,17 +26,17 @@ import {useState} from "react";
       }
       
     return(
-        <div>
+        <div style= {{textAlign: 'center' , margin: '15px'}} >
             <p>Select quantity</p>
-            <div>
+            <div style= {{textAlign: 'center' , margin: '15px'}}>
                 <p> Units: {counter}</p>
-                <button onClick={Increment} > + </button>
-                <button onClick={Reset} > Reset </button>
-                <button onClick={Decrement} > - </button>
+                <Button variant='outline-success' size='sm' onClick={Increment} > + </Button>
+                <Button variant='outline-secondary' size='sm' onClick={Reset} > Reset </Button>
+                <Button variant='outline-danger' size='sm' onClick={Decrement} > - </Button>
             </div>
-            <button onClick={addCounter} >Add to Cart</button>
+            <Button variant='success' size='m' onClick={addCounter} >Add to Cart</Button>
         </div>
     )
 }
 
-export default ItemCount;
+export default ItemCount

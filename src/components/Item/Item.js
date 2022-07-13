@@ -1,10 +1,10 @@
-import {Link} from "react-router-dom";
-import {MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol} from 'mdb-react-ui-kit';
+import { Link } from "react-router-dom"
+import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBCol } from 'mdb-react-ui-kit'
+import { Button } from "react-bootstrap"
 
 function Items ({item}) {
   return (
-    <MDBRow className='row-cols-1 row-cols-md-3 g-4'key={item.id}>
-      <MDBCol>
+    <MDBCol className="shadow p-3 bg-white">
         <MDBCard className='h-100'>
           <MDBCardImage 
             src= {item.image}
@@ -16,15 +16,14 @@ function Items ({item}) {
             <MDBCardText>{item.description}</MDBCardText>
           </MDBCardBody>
           <MDBCardFooter>
-            <small className='text-muted'>Price: U$D {item.price}</small>
+            <small className='text-muted'>Price: USD {item.price}</small>
                <Link to={`/item/${item.id}`}>
-                     <button className="btn btn-primary"> View </button>
+                    <Button variant='outline-info' style= {{marginLeft: '10px'}}> View </Button> {''} 
                </Link>
           </MDBCardFooter>
         </MDBCard>
-      </MDBCol>
-    </MDBRow> 
+        </MDBCol>
     
-  );
+  )
 }
-export default Items;
+export default Items
