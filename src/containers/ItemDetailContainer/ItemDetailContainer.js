@@ -28,7 +28,7 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail"
 
   return (
       
-      <div id='contenedor'>
+      <div>
             {loading ?
                  <ThreeDots
                  height="100"

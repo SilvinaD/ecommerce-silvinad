@@ -4,7 +4,8 @@ import { ThreeDots } from  'react-loader-spinner'
 
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
-import ItemList from '../../components/ItemList/ItemList';
+import ItemList from '../../components/ItemList/ItemList'
+import './ItemListContainer.css';
 
 
 const ItemListContainer = () => {
@@ -37,7 +38,7 @@ const ItemListContainer = () => {
         
     return (
 
-        <div id='contenedor'>
+        <div className='container'>
             
             {loading ?
                 <ThreeDots
