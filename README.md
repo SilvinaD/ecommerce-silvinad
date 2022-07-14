@@ -24,10 +24,12 @@ En *Firebase* se guardará la información -Orden de Compra-. Almacena los detal
 ---
 ## SCREEN SHOTS
 
-**Home modelo**
-![Home modelo](public/assets/images/Home.png)
+**Home Catalogo**
+![Home con catálogo](public/assets/images/Catalogue.png)
 
----
+
+**Categoria seleccionada**
+![Categoría Skateboards](public/assets/images/Product.png)
 
 ## DEPENDENCIAS AGREGADAS
 
